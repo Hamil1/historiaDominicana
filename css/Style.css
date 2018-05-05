@@ -39,6 +39,26 @@ article.marginCenter{
 }
 
 p{
-    font-size: 1.3em;
+    font-size: 1.5em;
     line-height: 1;
+}
+
+.bold{
+    font-weight: 550 !important;
+    color: black;
+}
+p:nth-child(1):first-letter {
+    font-size: 3.5em;
+    line-height: 1em;
+}
+
+p + p:first-letter {
+    font-size: 1em;
+    line-height: 1.25em;
+}
+
+img.padresdelapatria{
+    width: 30%;
+    max-width: 300px;
+    float: right;
 }
