@@ -1,0 +1,44 @@
+.center{
+    text-align: center;
+}
+
+section.principal{
+    height: 500px;    
+}
+
+.horizontal-center{
+    vertical-align: center;
+}
+
+section.segundo{
+    height: 500px;
+}
+
+article.marginCenter{
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.maxWidth{
+    max-width: 43em;
+}
+
+.desarrolloArticulo{
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+.letras{
+     font-family: georgia;
+}
+
+.desarrolloArticulo p{
+        line-height: 1.7em;
+        margin: 1.25em 0;
+        text-align: justify;
+}
+
+p{
+    font-size: 1.3em;
+    line-height: 1;
+}
