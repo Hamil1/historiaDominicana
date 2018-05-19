@@ -42,7 +42,7 @@ and open the template in the editor.
             </div>
         </section>
         <br>
-        <section class="segundo" style="margin-top: 300px">
+        <section class="segundo">
             <div class="letras">
                 <article class="marginCenter maxWidth letras">
                         <h2 class="center bold">Historia de la Republica Dominicana</h2>
@@ -76,9 +76,6 @@ and open the template in the editor.
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="./js/Script.js" type="text/javascript"></script>
         <script src="./js/TweenMax.js" type="text/javascript"></script>
-        <script src="./js/ScrollToPlugin.js" type="text/javascript"></script>
-        <script src="./js/EasePack.js" type="text/javascript"></script>
-        <script src="./js/EaselPlugin.js" type="text/javascript"></script>
         <script src="./js/animate-scroll.js" type="text/javascript"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>

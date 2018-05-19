@@ -12,7 +12,7 @@ $(document).ready(function(){
     parrafo = $('div.desarrolloArticulo'),
     efecto = new TimelineLite();
     
-    efecto.from(titulo, 0.3, {x: -500, autoAlpha: 0, ease:Power1.easeOut, delay: 0.3})
+    efecto.from(titulo, 0.5, {x: -300, autoAlpha: 0, ease: Power1.easeOut, delay: 0.3})
             .from(parrafo, 0.3, {y: -50, autoAlpha: 0, ease:Power1.easeOut, delay: 0.2});
     
 //    var controller = new ScrollMagic.Controller(); //Controlador de Scroll Magic
