@@ -3,7 +3,7 @@
 }
 
 section.principal{
-    height: 500px;    
+    height: 550px;    
 }
 
 .horizontal-center{
@@ -62,3 +62,13 @@ img.padresdelapatria{
     max-width: 300px;
     float: right;
 }
+
+/*Este estilo es para el Scroll magic (cuando se haga scroll se desvanezca)*/
+article{
+    /*opacity: 0;*/
+  }
+
+  article.show{
+    opacity: 1;
+    transition: 1.3s;
+  }
