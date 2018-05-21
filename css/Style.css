@@ -72,3 +72,22 @@ article{
     opacity: 1;
     transition: 1.3s;
   }
+  
+  .red-cube{
+  background: red;
+  margin: 0 auto;
+  display: block;
+  padding: 40px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0;
+  transition: .5s;
+  width: 0%
+}
+
+.red-cube.show{
+  opacity: 1;
+  width: 100%
+}

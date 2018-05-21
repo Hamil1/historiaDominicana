@@ -8,28 +8,27 @@
 $(document).ready(function(){
     console.log("El documento 'Script' de Historia Dominicana está listo.");
     
-    var titulo = $('article h2'),
-    parrafo = $('div.desarrolloArticulo'),
+    var titulo = $('article h2.magic'),
+    parrafo = $('div.desarrolloArticulo.magic'),
     efecto = new TimelineLite();
     
     efecto.from(titulo, 0.5, {x: -300, autoAlpha: 0, ease: Power1.easeOut, delay: 0.3})
             .from(parrafo, 0.3, {y: -50, autoAlpha: 0, ease:Power1.easeOut, delay: 0.2});
     
-//    var controller = new ScrollMagic.Controller(); //Controlador de Scroll Magic
-//    $('article').each(function(){
-//        var tween = TweenMax.from($(this), 0.6,{y: -15, autoAlpha: 0, ease:Power1.easeOut, delay:0.7});
-//        
-//        var scene = new ScrollMagic.Scene({
-//            triggerElement: this
-//        })
-//                .setTween(tween)
-//                .addTo(controller);
-//    });
-//    var scene = new ScrollMagic.Scene({ //Haciendo la escena
-//      triggerElement: 'article'
-//    })
-//    .setClassToggle('article','show')
-//    .addTo(controller);
+    var controller = new ScrollMagic.Controller(); //Controlador de Scroll Magic
+
+    var scene = new ScrollMagic.Scene({ //Haciendo la escena
+      triggerElement: '.magic',
+      triggerHook: 0.3
+    })
+    .setClassToggle('.magic','show')
+    .addIndicators({
+        name: 'fade scene',
+        colorTrigger: 'black',
+        indent: 200,
+        colorStart: '#75C695'
+    })
+    .addTo(controller);
 
 
 });

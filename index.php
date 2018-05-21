@@ -18,8 +18,8 @@ and open the template in the editor.
         <section class="principal">
             <div class="letras">
                 <article class="marginCenter maxWidth letras">
-                        <h2 class="center bold">Historia de la Republica Dominicana</h2>
-                        <div class="desarrolloArticulo" style="overflow: hidden !important">
+                        <h2 class="center bold magic">Historia de la Republica Dominicana</h2>
+                        <div class="desarrolloArticulo magic" style="overflow: hidden !important">
                             <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos. 
                             Durante los 22 años que precedieron a la independencia, toda la isla de La Española estuvo bajo el dominio de Haití. 
                             Después de los esfuerzos hechos por patriotas dominicanos para independizar el país del dominio haitiano, varias acciones
@@ -45,8 +45,8 @@ and open the template in the editor.
         <section class="segundo">
             <div class="letras">
                 <article class="marginCenter maxWidth letras">
-                        <h2 class="center bold">Historia de la Republica Dominicana</h2>
-                        <div class="desarrolloArticulo" style="overflow: hidden !important">
+                        <h2 class="center bold magic">Historia de la Republica Dominicana</h2>
+                        <div class="desarrolloArticulo magic" style="overflow: hidden !important">
                             <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos. 
                             Durante los 22 años que precedieron a la independencia, toda la isla de La Española estuvo bajo el dominio de Haití. 
                             Después de los esfuerzos hechos por patriotas dominicanos para independizar el país del dominio haitiano, varias acciones
