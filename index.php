@@ -17,9 +17,9 @@ and open the template in the editor.
     <body>
         <section class="principal">
             <div class="letras">
-                <article class="marginCenter maxWidth letras">
-                        <h2 class="center bold magic">Historia de la Republica Dominicana</h2>
-                        <div class="desarrolloArticulo magic" style="overflow: hidden !important">
+                <article class="marginCenter maxWidth letras magic">
+                    <h2 class="center bold ">Historia de la Republica Dominicana</h2>
+                        <div class="desarrolloArticulo " style="overflow: hidden !important">
                             <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos. 
                             Durante los 22 años que precedieron a la independencia, toda la isla de La Española estuvo bajo el dominio de Haití. 
                             Después de los esfuerzos hechos por patriotas dominicanos para independizar el país del dominio haitiano, varias acciones
@@ -44,11 +44,11 @@ and open the template in the editor.
         <br>
         <section class="segundo">
             <div class="letras">
-                <article class="marginCenter maxWidth letras">
-                        <h2 class="center bold magic">Historia de la Republica Dominicana</h2>
-                        <div class="desarrolloArticulo magic" style="overflow: hidden !important">
+                <article class="marginCenter maxWidth letras magic">
+                        <h2 class="center bold">Historia de la Republica Dominicana</h2>
+                        <div class="desarrolloArticulo" style="overflow: hidden !important">
                             <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos. 
-                            Durante los 22 años que precedieron a la independencia, toda la isla de La Española estuvo bajo el dominio de Haití. 
+                                    Durante los 22 años que precedieron a la independencia, toda la isla de La Española estuvo bajo el dominio de Haití. 
                             Después de los esfuerzos hechos por patriotas dominicanos para independizar el país del dominio haitiano, varias acciones
                             militares ocurridas entre 1844 y 1856 terminaron por consolidar a la república como un nuevo estado. Los haitianos intentaron
                             varias veces volver a dominar la recién creada república con resultados fallidos hasta que en 1867 Haití reconoció la 

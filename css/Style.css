@@ -64,12 +64,13 @@ img.padresdelapatria{
 }
 
 /*Este estilo es para el Scroll magic (cuando se haga scroll se desvanezca)*/
-article{
-    /*opacity: 0;*/
+.magic{
+    opacity: 1;
+    transition: 1.3s;
   }
 
-  article.show{
-    opacity: 1;
+.magic.show {
+    opacity: 0;
     transition: 1.3s;
   }
   
