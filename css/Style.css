@@ -2,16 +2,8 @@
     text-align: center;
 }
 
-section.principal{
-    height: 550px;    
-}
-
 .horizontal-center{
     vertical-align: center;
-}
-
-section.segundo{
-    height: 500px;
 }
 
 article.marginCenter{
