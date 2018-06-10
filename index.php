@@ -15,9 +15,19 @@ and open the template in the editor.
         
     </head>
     <body>
+        <div class="menu">
+            <ul>
+                <li><a href="#"></a>Invasión y ocupación haitiana</li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        
         <div class="letras">
             <article class="marginCenter maxWidth letras first">
                 <h2 class="center bold ">Historia de la Republica Dominicana</h2>
+                        <div class="magic"></div>
                     <div class="desarrolloArticulo " style="overflow: hidden !important">
                         <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos. 
                         Durante los 22 años que precedieron a la independencia, toda la isla de La Española estuvo bajo el dominio de Haití. 
@@ -28,8 +38,6 @@ and open the template in the editor.
                         <div>
                             <img src="./imagenes/padresDeLaPatria.jpeg" alt="Padres de la patria" class="padresdelapatria">
                         </div>
-
-                        <div class="magic"></div>
                         <p>
                             La palabra Dominicana proviene del latín Dominicus, que significa Domingo. Sin embargo, la isla tiene este nombre por 
                             Santo Domingo de Guzmán, fundador de la Orden de los Dominicos.
@@ -44,6 +52,7 @@ and open the template in the editor.
         <div class="letras">
             <article class="marginCenter maxWidth letras">
                     <h2 class="center bold">Historia de la Republica Dominicana</h2>
+                        <div class="magic"></div>
                     <div class="desarrolloArticulo" style="overflow: hidden !important">
                         <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos. 
                                 Durante los 22 años que precedieron a la independencia, toda la isla de La Española estuvo bajo el dominio de Haití. 
@@ -54,7 +63,6 @@ and open the template in the editor.
                         <div>
                             <img src="./imagenes/padresDeLaPatria.jpeg" alt="Padres de la patria" class="padresdelapatria">
                         </div>
-                        <div class="magic"></div>
                         <p>
                             La palabra Dominicana proviene del latín Dominicus, que significa Domingo. Sin embargo, la isla tiene este nombre por 
                             Santo Domingo de Guzmán, fundador de la Orden de los Dominicos.
@@ -69,6 +77,7 @@ and open the template in the editor.
         <div class="letras">
             <article class="marginCenter maxWidth letras">
                     <h2 class="center bold">Historia de la Republica Dominicana</h2>
+                        <div class="magic"></div>
                     <div class="desarrolloArticulo" style="overflow: hidden !important">
                         <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos. 
                                 Durante los 22 años que precedieron a la independencia, toda la isla de La Española estuvo bajo el dominio de Haití. 
@@ -79,7 +88,6 @@ and open the template in the editor.
                         <div>
                             <img src="./imagenes/padresDeLaPatria.jpeg" alt="Padres de la patria" class="padresdelapatria">
                         </div>
-                        <div class="magic"></div>
                         <p>
                             La palabra Dominicana proviene del latín Dominicus, que significa Domingo. Sin embargo, la isla tiene este nombre por 
                             Santo Domingo de Guzmán, fundador de la Orden de los Dominicos.
