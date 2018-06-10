@@ -17,10 +17,10 @@ and open the template in the editor.
     <body>
         <div class="menu">
             <ul>
-                <li><a href="#"></a>Invasión y ocupación haitiana</li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#">Independencia Efímera</a></li>
+                <li><a href="#">Invasión y ocupación haitiana</a></li>
+                <li><a href="#">Independencia Dominicana</a></li>
+                <li><a href="#">Haití intenta dominar República Dominicana</a></li>
             </ul>
         </div>
         
