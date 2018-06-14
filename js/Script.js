@@ -18,5 +18,4 @@ $(document).ready(function(){
         .addIndicators()
         .addTo(controller);//Agregando la escena al controlador
     });
-    $('div.magic').val().toUpperCase();
 });
