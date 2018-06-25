@@ -15,8 +15,8 @@ and open the template in the editor......
 
     </head>
     <body>
-        <div class="menu">
-            <ul>
+        <div>
+            <ul class="menu">
                 <li><a href="#">Independencia Efímera</a></li>
                 <li><a href="#">Invasión y ocupación haitiana</a></li>
                 <li><a href="#">Independencia Dominicana</a></li>

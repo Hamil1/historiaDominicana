@@ -18,4 +18,9 @@ $(document).ready(function(){
         .addIndicators()
         .addTo(controller);//Agregando la escena al controlador
     });
+    
+    $(document).on('click','ul li a', function(){
+        $('ul.menu li').removeClass("active");
+        $(this).parent().addClass("active");
+    });
 });
