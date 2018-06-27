@@ -12,17 +12,19 @@ and open the template in the editor......
         <link rel="stylesheet" type="text/css" href="css/Style.css">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     </head>
     <body>
-        <div>
-            <ul class="menu">
-                <li><a href="#">Independencia Efímera</a></li>
-                <li><a href="#">Invasión y ocupación haitiana</a></li>
-                <li><a href="#">Independencia Dominicana</a></li>
-                <li><a href="#">Haití intenta dominar República Dominicana</a></li>
-            </ul>
-        </div>
+        <div id="mostrarNav"></div>
+            <nav class="mostrar">
+                <ul class="menu">
+                    <li><a href="#">Independencia Efímera</a></li>
+                    <li><a href="#">Invasión y ocupación haitiana</a></li>
+                    <li><a href="#">Independencia Dominicana</a></li>
+                    <li><a href="#">Haití intenta dominar R. Dominicana</a></li>
+                </ul>
+            </nav>
+        
 
         <div class="letras">
             <article class="marginCenter maxWidth letras first">

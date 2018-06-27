@@ -16,18 +16,18 @@ article.marginCenter{
 }
 
 .desarrolloArticulo{
-    line-height: 2rem;
+    line-height: 3rem;
     font-size: 1rem;
 }
 
 .letras{
-     font-family: georgia;
+    font-family: 'Crimson Text', serif;
 }
 
 .desarrolloArticulo p{
-        line-height: 1.7em;
-        margin: 1.25em 0;
-        text-align: justify;
+    line-height: 2.3em;
+    margin: 1.25em 0;
+    text-align: justify;
 }
 
 p{
@@ -36,7 +36,7 @@ p{
 }
 
 .bold{
-    font-weight: 550 !important;
+    font-weight: 600;
     color: black;
 }
 p:nth-child(1):first-letter {
@@ -90,20 +90,65 @@ img.padresdelapatria{
   line-height: 40px;
   padding-left: 0;
   margin: 2em auto;
-  width: 22em;
-}
-
-.menu a{
-    color: black;
-    text-decoration: none;
+  width: 24em;
 }
 
 .menu li{
     /* border-left: 3px solid black; */
     padding-left: 1.5em;
     margin-bottom: 5px;
+    --webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.menu li:hover{
+    box-shadow: 20em 0 #f2f2f2 inset;
+}
+
+ul.menu li a{
+    color: #535a60;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1em;
+    --webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 }
 
 .menu li.active{
     border-left: 3px solid #ecab46;
+    box-shadow: 20em 0 #f2f2f2 inset;
 }
+
+.menu li.active a{
+    font-weight: bold;
+    color: black;
+    font-style: italic;
+    margin-left: 1em;
+}
+
+.menu li:hover a{
+    color: black;
+    font-style: italic;
+    margin-left: 1em;
+}
+
+nav{
+    position: absolute;
+    left: -24em;
+    z-index: 20;
+}
+
+nav.mostrar{
+    left: 0;
+}
+
+div#mostrarNav{
+    width: 30px;
+    height: 30px;
+    background: url(../imagenes/Hamburger_icon.svg.png);
+}
+
