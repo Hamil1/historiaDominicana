@@ -16,8 +16,9 @@ and open the template in the editor......
     </head>
     <body>
         <div id="mostrarNav"></div>
-            <nav class="mostrar">
+            <nav id="menu">
                 <ul class="menu">
+                    <li class="active"><a href="#">Inicio</a></li>
                     <li><a href="#">Independencia Efímera</a></li>
                     <li><a href="#">Invasión y ocupación haitiana</a></li>
                     <li><a href="#">Independencia Dominicana</a></li>

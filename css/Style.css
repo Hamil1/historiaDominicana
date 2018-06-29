@@ -89,7 +89,7 @@ img.padresdelapatria{
   list-style: none;
   line-height: 40px;
   padding-left: 0;
-  margin: 2em auto;
+  
   width: 24em;
 }
 
@@ -113,8 +113,6 @@ ul.menu li a{
     width: 100%;
     font-family: 'Crimson Text', serif;
     font-size: 1.1em;
-    --webkit-transition: all .5s;
-    -o-transition: all .5s;
     transition: all .5s;
 }
 
@@ -140,6 +138,8 @@ nav{
     position: absolute;
     left: -24em;
     z-index: 20;
+    padding-top: 3em;
+    transition: all .2s;
 }
 
 nav.mostrar{
@@ -149,6 +149,21 @@ nav.mostrar{
 div#mostrarNav{
     width: 30px;
     height: 30px;
-    background: url(../imagenes/Hamburger_icon.svg.png);
+    background-image: url(../imagenes/Hamburger_icon.png);
+    background-size: contain;
+    z-index: 30;
+    position: absolute;
+    left: 2em;
+    cursor: pointer;
 }
 
+div#mostrarNav.cerrar{
+    width: 30px;
+    height: 30px;
+    background-image: url(../imagenes/close-icon-48.png);
+    background-size: contain;
+    z-index: 30;
+    position: absolute;
+    left: 2em;
+    cursor: pointer;
+}

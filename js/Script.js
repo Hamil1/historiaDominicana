@@ -23,4 +23,9 @@ $(document).ready(function(){
         $('ul.menu li').removeClass("active");
         $(this).parent().addClass("active");
     });
+
+    $(document).on('click','div#mostrarNav',function(){
+        $('nav#menu').toggleClass('mostrar');
+        $(this).toggleClass('cerrar');
+    });
 });
