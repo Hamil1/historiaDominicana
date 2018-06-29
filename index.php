@@ -15,16 +15,18 @@ and open the template in the editor......
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     </head>
     <body>
-        <div id="mostrarNav"></div>
-            <nav id="menu">
-                <ul class="menu">
-                    <li class="active"><a href="#">Inicio</a></li>
-                    <li><a href="#">Independencia Efímera</a></li>
-                    <li><a href="#">Invasión y ocupación haitiana</a></li>
-                    <li><a href="#">Independencia Dominicana</a></li>
-                    <li><a href="#">Haití intenta dominar R. Dominicana</a></li>
-                </ul>
-            </nav>
+            <header>
+                <div id="mostrarNav"></div>
+                <nav id="menu">
+                    <ul class="menu">
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#">Independencia Efímera</a></li>
+                        <li><a href="#">Invasión y ocupación haitiana</a></li>
+                        <li><a href="#">Independencia Dominicana</a></li>
+                        <li><a href="#">Haití intenta dominar R. Dominicana</a></li>
+                    </ul>
+                </nav>
+            </header>
         
 
         <div class="letras">

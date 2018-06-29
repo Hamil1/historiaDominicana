@@ -89,8 +89,7 @@ img.padresdelapatria{
   list-style: none;
   line-height: 40px;
   padding-left: 0;
-  
-  width: 24em;
+  width: 21em;
 }
 
 .menu li{
@@ -104,6 +103,11 @@ img.padresdelapatria{
 
 .menu li:hover{
     box-shadow: 20em 0 #f2f2f2 inset;
+}
+
+header{
+    position: fixed;
+    z-index: 100;
 }
 
 ul.menu li a{
