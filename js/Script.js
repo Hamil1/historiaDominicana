@@ -15,7 +15,6 @@ $(document).ready(function(){
             triggerElement: this,
             triggerHook: 0
         }).setVelocity($(this).closest('article'),{opacity: 0}, {duration: 400})//Libreria de animación
-        .addIndicators()
         .addTo(controller);//Agregando la escena al controlador
     });
     
