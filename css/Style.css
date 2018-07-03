@@ -171,3 +171,16 @@ div#mostrarNav.cerrar{
     left: 2em;
     cursor: pointer;
 }
+
+button.acceder{
+    float: right;
+    background-color: #E29926;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+div.contenedorAcceder{
+    padding-right: 15px;
+}

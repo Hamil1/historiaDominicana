@@ -15,6 +15,11 @@ and open the template in the editor......
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     </head>
     <body>
+             <div>
+                <div class="contenedorAcceder">
+                    <button class="btn acceder">Acceder</button>
+                </div>
+            </div>
             <header>
                 <div id="mostrarNav"></div>
                 <nav id="menu">
