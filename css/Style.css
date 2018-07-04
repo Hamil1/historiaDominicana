@@ -121,7 +121,7 @@ ul.menu li a{
 }
 
 .menu li.active{
-    border-left: 3px solid #ecab46;
+    border-left: 3px solid #e57933;
     box-shadow: 20em 0 #f2f2f2 inset;
 }
 
@@ -174,13 +174,36 @@ div#mostrarNav.cerrar{
 
 button.acceder{
     float: right;
-    background-color: #E29926;
+    background-color: #e57933;
     color: #ffffff;
     font-weight: normal;
     font-size: 13px;
     border-radius: 6px;
+    transition: all .3s;
+    padding: 10px 22px 7px 22px;
+}
+
+button.acceder:hover{
+    float: right;
+    background-color: #f59659;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 13px;
+    border-radius: 6px;
+    padding: 10px 22px 7px 22px;
+}
+
+button.acceder:focus{
+    float: right;
+    background-color: #e57933;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 13px;
+    border-radius: 6px;
+    padding: 10px 22px 7px 22px;
 }
 
 div.contenedorAcceder{
     padding: 15px;
 }
+

@@ -10,14 +10,16 @@ and open the template in the editor......
         <title>Historia Dominicana</title>
         <!--Css-->
         <link rel="stylesheet" type="text/css" href="css/Style.css">
+        <link rel="stylesheet" type="text/css" href="css/modalLogin.css">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
              <div>
                 <div class="contenedorAcceder">
-                    <button class="btn acceder">Acceder</button>
+                    <button href="#myModal" class="btn acceder" data-toggle="modal">Agregar Articulo <i class="fa fa-plus"></i></button>
                 </div>
             </div>
             <header>
@@ -33,6 +35,36 @@ and open the template in the editor......
                 </nav>
             </header>
         
+            <div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">				
+				<h4 class="modal-title">Iniciar sesión</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form action="/examples/actions/confirmation.php" method="post">
+					<div class="form-group">
+						<i class="fa fa-user"></i>
+						<input type="text" class="form-control" placeholder="Nombre de usuario" required="required">
+					</div>
+					<div class="form-group">
+						<i class="fa fa-lock"></i>
+						<input type="password" class="form-control" placeholder="Contraseña" required="required">					
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Acceder">
+					</div>
+				</form>				
+				
+			</div>
+			<div class="modal-footer">
+				<a href="#">¿Olvidaste tu contraseña?</a>
+			</div>
+		</div>
+	</div>
+</div>
+
 
         <div class="letras">
             <article class="marginCenter maxWidth letras first">
