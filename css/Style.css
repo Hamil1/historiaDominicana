@@ -176,29 +176,23 @@ button.acceder{
     color: #ffffff;
     font-weight: normal;
     font-size: 13px;
-    border-radius: 6px;
+    width: 60px;
+    height: 60px;
     transition: all .3s;
-    padding: 10px 22px 7px 22px;
+    /* padding: 10px 22px 7px 22px; */
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
 }
 
 button.acceder:hover{
-    float: right;
     background-color: #f59659;
     color: #ffffff;
-    font-weight: normal;
-    font-size: 13px;
-    border-radius: 6px;
-    padding: 10px 22px 7px 22px;
 }
 
 button.acceder:focus{
-    float: right;
     background-color: #e57933;
     color: #ffffff;
-    font-weight: normal;
-    font-size: 13px;
-    border-radius: 6px;
-    padding: 10px 22px 7px 22px;
 }
 
 div.contenedorAcceder{
