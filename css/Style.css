@@ -128,13 +128,11 @@ ul.menu li a{
 .menu li.active a{
     font-weight: bold;
     color: black;
-    font-style: italic;
     margin-left: 1em;
 }
 
 .menu li:hover a{
     color: black;
-    font-style: italic;
     margin-left: 1em;
 }
 

@@ -1,5 +1,0 @@
-/* 
-Project: ${project.name}
-File: ${name} 
-Created by Hamil on ${date} - ${time}. 
-*/

@@ -19,7 +19,7 @@ and open the template in the editor......
     <body>
              <div>
                 <div class="contenedorAcceder">
-                    <button href="#myModal" class="btn acceder" data-toggle="modal">Agregar Articulo <i class="fa fa-plus"></i></button>
+                    <button href="#myModal" id="acceder" class="btn acceder" data-toggle="modal"><i class="fa fa-plus"></i> &nbsp; Agregar Articulo</button>
                 </div>
             </div>
             <header>
