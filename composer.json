@@ -1,0 +1,15 @@
+{
+    "name": "hamil/historia-dominicana",
+    "description": "Historia de la República Dominicana",
+    "type": "Project",
+    "require": {
+        "gabordemooij/redbean": "5.1"
+    },
+    "license": "Propietary",
+    "authors": [
+        {
+            "name": "Hamil",
+            "email": "hamil151@hotmail.com"
+        }
+    ]
+}
