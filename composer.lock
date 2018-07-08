@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4dc921a6c590b95cc5766324e7e1ae71",
+    "content-hash": "044b1e6bcbb0ef67b26363a6c3fb3c4b",
     "packages": [
         {
             "name": "gabordemooij/redbean",
-            "version": "v5.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gabordemooij/redbean.git",
-                "reference": "a02e58ad5519149f572559a8293b5dffea385956"
+                "reference": "20f6bd58d62f13ae811b615ab2788251205fd31d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/a02e58ad5519149f572559a8293b5dffea385956",
-                "reference": "a02e58ad5519149f572559a8293b5dffea385956",
+                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/20f6bd58d62f13ae811b615ab2788251205fd31d",
+                "reference": "20f6bd58d62f13ae811b615ab2788251205fd31d",
                 "shasum": ""
             },
             "require": {
@@ -31,7 +31,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "New BSD and GPLv2"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -45,13 +45,15 @@
             "keywords": [
                 "orm"
             ],
-            "time": "2018-04-01T11:51:37+00:00"
+            "time": "2018-07-01T09:51:03+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "gabordemooij/redbean": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

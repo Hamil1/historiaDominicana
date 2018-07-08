@@ -3,7 +3,7 @@
     "description": "Historia de la República Dominicana",
     "type": "Project",
     "require": {
-        "gabordemooij/redbean": "5.1"
+        "gabordemooij/redbean": "dev-master"
     },
     "license": "Propietary",
     "authors": [
