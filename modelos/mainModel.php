@@ -14,7 +14,7 @@ class mainModel{
         $usuario->apellido = $apellido;
         $usuario->correo = $correo;
         $usuario->contrasena = sha1($contrasena);
-        $usuario->fecha_creacion = (!$fecha_creacion)?date('m/d/Y H:i',time()):$fecha_creacion;
+        $usuario->fecha_creacion = (!$fecha_creacion)?time():$fecha_creacion;
         R::store($usuario);
     }
 
