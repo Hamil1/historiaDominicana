@@ -1,17 +1,23 @@
 <?php 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 class_alias('\RedBeanPHP\R','R');
 
-R::setup('mysql:host=localhost;dbname=historiaDominicana', 'root','');
+class mainModel{
+    function __construct(){
+        R::setup('mysql:host=localhost;dbname=historiaDominicana', 'root','');
+    }
 
-$usuario = R::dispense('usuarios');
-$usuario->nombre = 'Hamil';
-$usuario->apellido = 'Diaz';
-$usuario->correo = 'hamil151@hotmail.com';
-$usuario->contrasena = sha1('hamil12345');
-$usuario->fecha_creacion = time();
-R::store($usuario);
-echo time();
+    public function crearUsuario($nombre, $apellido, $correo, $contrasena, $fecha_creacion = false){
+        $usuario = R::dispense('usuarios');
+        $usuario->nombre = $nombre;
+        $usuario->apellido = $apellido;
+        $usuario->correo = $correo;
+        $usuario->contrasena = sha1($contrasena);
+        $usuario->fecha_creacion = (!$fecha_creacion)?date('m/d/Y H:i',time()):$fecha_creacion;
+        R::store($usuario);
+    }
+
+}
 
 ?>
