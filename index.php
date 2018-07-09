@@ -17,12 +17,7 @@ and open the template in the editor......
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-    <?php 
-        require 'modelos/mainModel.php';
-        $modelo = new mainModel();
-        $modelo->crearUsuario('Hamil', 'Diaz', 'hamil151@hotmail.com', '12345');
-    ?>
-             <div>
+            <div>
                 <div class="contenedorAcceder">
                     <span href="#myModal" data-toggle="modal"><button class="btn acceder" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span>
                 </div>
@@ -40,7 +35,7 @@ and open the template in the editor......
                 </nav>
             </header>
         
-            <div id="myModal" class="modal fade">
+        <div id="myModal" class="modal fade">
 	<div class="modal-dialog modal-login">
 		<div class="modal-content">
 			<div class="modal-header">				
