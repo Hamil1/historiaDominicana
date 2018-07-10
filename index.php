@@ -15,11 +15,14 @@ and open the template in the editor......
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/reset.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel="stylesheet" href="css/modalLogin/style.css">
     </head>
     <body>
             <div>
                 <div class="contenedorAcceder">
-                    <span href="#myModal" data-toggle="modal"><button class="btn acceder" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span>
+                    <span data-toggle="modal"><button id="articulo" class="btn acceder cd-signin" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span>
                 </div>
             </div>
             <header>
@@ -34,8 +37,99 @@ and open the template in the editor......
                     </ul>
                 </nav>
             </header>
+
+<div class="cd-user-modal" id="modalLog"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Iniciar sesión</a></li>
+				<li><a href="#0">Crear cuenta</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">Correo electrónico</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Correo electrónico">
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Contraseña</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Contraseña">
+						<a href="#0" class="hide-password">Ocultar</a>
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Recordar</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Iniciar sesión">
+					</p>
+				</form>
+				
+				<p class="cd-form-bottom-message"><a href="#0">¿Olvidaste tu contraseña?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- sign up form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Nombre de usuario</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Nombre">
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">Correo electrónico</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="Correo Electrónico">
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Contraseña</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Contraseña">
+						<a href="#0" class="hide-password">Ocultar</a>
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">Acepto los <a href="#0">términos</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Crear Cuenta">
+					</p>
+				</form>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">¿Perdiste tú contraseña? Introduce tú correo electrónico. Recibiras un correo para crear una contraseña nueva.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">Correo</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="Correo">
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Restablecer contraseña">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Volver a iniciar sesión</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">Cerrar</a>
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
         
-        <div id="myModal" class="modal fade">
+<div id="myModal" class="modal fade">
 	<div class="modal-dialog modal-login">
 		<div class="modal-content">
 			<div class="modal-header">				
@@ -147,6 +241,7 @@ and open the template in the editor......
         // put your code here
         ?>
         <!--Todos los documentos JavaScript-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.0/TweenMax.min.js"></script>
@@ -157,5 +252,6 @@ and open the template in the editor......
         <script src="./js/velocity.min.js" type="text/javascript"></script>
         <script src="./js/Scrollmagic/plugins/animation.velocity.js" type="text/javascript"></script>
         <script src="./js/Script.js" type="text/javascript"></script>
+        <script  src="js/modalLogin/index.js"></script>
     </body>
 </html>

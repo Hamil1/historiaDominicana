@@ -146,6 +146,7 @@ nav{
 
 nav.mostrar{
     left: 0;
+    margin-top: 50px;
 }
 
 div#mostrarNav{
