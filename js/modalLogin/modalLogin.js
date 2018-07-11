@@ -83,6 +83,11 @@ jQuery(document).ready(function($){
 	//REMOVE THIS - it's just to show error messages 
 	$form_login.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
+		var emailLogin = $form_login.find('input[type="email"]');
+		$.each(emailLogin, function(value){
+			console.log(emailLogin[value]);
+		});
+
 		$form_login.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
 	});
 	$form_signup.find('input[type="submit"]').on('click', function(event){
