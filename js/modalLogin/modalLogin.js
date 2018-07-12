@@ -38,7 +38,7 @@ jQuery(document).ready(function($){
 	//hide or show password
 	$('.hide-password').on('click', function(){
 		var $this= $(this),
-			$password_field = $this.siblings('input#signin-password');
+			$password_field = $this.siblings('input');
 		
 		( 'password' == $password_field.attr('type') ) ? $password_field.attr('type', 'text') : $password_field.attr('type', 'password');
 		( 'Mostrar' == $this.text() ) ? $this.text('Ocultar') : $this.text('Mostrar');
