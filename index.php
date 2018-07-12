@@ -49,13 +49,13 @@ and open the template in the editor......
 				<form class="cd-form">
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signin-email">Correo electrónico</label>
-						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Correo electrónico">
+						<input class="full-width has-padding has-border validation" id="signin-email" type="email" placeholder="Correo electrónico">
 						<span class="cd-error-message">Campo vacío</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signin-password">Contraseña</label>
-						<input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Contraseña">
+						<input class="full-width has-padding has-border validation" id="signin-password" type="password"  placeholder="Contraseña">
 						<span class="cd-error-message">Campo vacío</span>
 						<a href="#0" class="hide-password">Mostrar</a>
 					</p>
@@ -78,19 +78,19 @@ and open the template in the editor......
 				<form class="cd-form">
 					<p class="fieldset">
 						<label class="image-replace cd-username" for="signup-username">Nombre de usuario</label>
-						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Nombre">
+						<input class="full-width has-padding has-border validation" id="signup-username" type="text" placeholder="Nombre">
 						<span class="cd-error-message">Campo vacío</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signup-email">Correo electrónico</label>
-						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="Correo electrónico">
+						<input class="full-width has-padding has-border validation" id="signup-email" type="email" placeholder="Correo electrónico">
 						<span class="cd-error-message">Campo vacío</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signup-password">Contraseña</label>
-						<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Contraseña">
+						<input class="full-width has-padding has-border validation" id="signup-password" type="password"  placeholder="Contraseña">
 						<span class="cd-error-message">Campo vacío</span>
 						<a href="#0" class="hide-password">Mostrar</a>
 					</p>

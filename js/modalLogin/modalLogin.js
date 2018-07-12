@@ -83,16 +83,24 @@ jQuery(document).ready(function($){
 	//REMOVE THIS - it's just to show error messages 
 	$form_login.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
-		var emailLogin = $form_login.find('input[type="email"]');
-		var contrasenaLogin = $form_login.find('input[type="password"]');
-		emailLogin.removeClass('has-error').next('span').removeClass('is-visible');
-		contrasenaLogin.removeClass('has-error').next('span').removeClass('is-visible');
+		var input = $form_modal.find('input.validation');
 
-		if(emailLogin.val().length == 0){
-			emailLogin.toggleClass('has-error').next('span').toggleClass('is-visible');
-		}else if(contrasenaLogin.val().length == 0){
-			contrasenaLogin.toggleClass('has-error').next().toggleClass('is-visible');
-		}
+		$(input).each(function(){
+			$(this).removeClass('has-error').next('span').removeClass('is-visible');
+		});
+		
+		$(input).each(function(){
+			if($(this).val().length == 0){
+				$(this).toggleClass('has-error').next('span').toggleClass('is-visible');
+			}
+		});
+
+		// console.log("esta entrando");
+		// if(emailLogin.val().length == 0){
+		// 	emailLogin.toggleClass('has-error').next('span').toggleClass('is-visible');
+		// }else if(contrasenaLogin.val().length == 0){
+		// 	contrasenaLogin.toggleClass('has-error').next('span').toggleClass('is-visible');
+		// }
 
 	});
 	
