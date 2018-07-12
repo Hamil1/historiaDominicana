@@ -38,7 +38,7 @@ jQuery(document).ready(function($){
 	//hide or show password
 	$('.hide-password').on('click', function(){
 		var $this= $(this),
-			$password_field = $this.prev('input');
+			$password_field = $this.siblings('input#signin-password');
 		
 		( 'password' == $password_field.attr('type') ) ? $password_field.attr('type', 'text') : $password_field.attr('type', 'password');
 		( 'Mostrar' == $this.text() ) ? $this.text('Ocultar') : $this.text('Mostrar');
@@ -84,12 +84,18 @@ jQuery(document).ready(function($){
 	$form_login.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
 		var emailLogin = $form_login.find('input[type="email"]');
-		$.each(emailLogin, function(value){
-			console.log(emailLogin[value]);
-		});
+		var contrasenaLogin = $form_login.find('input[type="password"]');
+		emailLogin.removeClass('has-error').next('span').removeClass('is-visible');
+		contrasenaLogin.removeClass('has-error').next('span').removeClass('is-visible');
 
-		$form_login.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
+		if(emailLogin.val().length == 0){
+			emailLogin.toggleClass('has-error').next('span').toggleClass('is-visible');
+		}else if(contrasenaLogin.val().length == 0){
+			contrasenaLogin.toggleClass('has-error').next().toggleClass('is-visible');
+		}
+
 	});
+	
 	$form_signup.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
 		$form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');

@@ -56,8 +56,8 @@ and open the template in the editor......
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signin-password">Contraseña</label>
 						<input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Contraseña">
-						<a href="#0" class="hide-password">Mostrar</a>
 						<span class="cd-error-message">Campo vacío</span>
+						<a href="#0" class="hide-password">Mostrar</a>
 					</p>
 
 					<p class="fieldset">
