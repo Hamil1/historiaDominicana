@@ -83,7 +83,7 @@ jQuery(document).ready(function($){
 	//REMOVE THIS - it's just to show error messages 
 	$form_login.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
-		var input = $form_modal.find('input.validation');
+		var input = $form_login.find('input.validation');
 
 		$(input).each(function(){
 			$(this).removeClass('has-error').next('span').removeClass('is-visible');
@@ -95,18 +95,26 @@ jQuery(document).ready(function($){
 			}
 		});
 
-		// console.log("esta entrando");
-		// if(emailLogin.val().length == 0){
-		// 	emailLogin.toggleClass('has-error').next('span').toggleClass('is-visible');
-		// }else if(contrasenaLogin.val().length == 0){
-		// 	contrasenaLogin.toggleClass('has-error').next('span').toggleClass('is-visible');
-		// }
-
 	});
 	
 	$form_signup.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
-		$form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
+		var input = $form_signup.find('input.validation');
+
+		$(input).each(function(){
+			$(this).removeClass('has-error').next('span').removeClass('is-visible');
+		});
+		
+		$(input).each(function(){
+			if($(this).val().length == 0){
+				$(this).toggleClass('has-error').next('span').toggleClass('is-visible');
+			}
+		});
+	});
+
+	$form_forgot_password.find('input[type="submit"]').on('click', function(event){
+		event.preventDefault();
+		$form_forgot_password.find('');
 	});
 
 

@@ -101,7 +101,7 @@ and open the template in the editor......
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Crear Cuenta">
+						<input class="full-width has-padding" type="submit" value="Crear Cuenta" formulario="cd-signup">
 					</p>
 				</form>
 
