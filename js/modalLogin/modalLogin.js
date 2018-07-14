@@ -81,9 +81,12 @@ jQuery(document).ready(function($){
 	}
 
 	//REMOVE THIS - it's just to show error messages 
-	$form_login.find('input[type="submit"]').on('click', function(event){
+	$form_modal.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
-		var input = $form_login.find('input.validation');
+		var formulario = $(this).attr('formulario'),
+		form = $form_modal.find('#' + formulario),
+		input = form.find('input.validation'),
+		boolean = true;
 
 		$(input).each(function(){
 			$(this).removeClass('has-error').next('span').removeClass('is-visible');
@@ -92,31 +95,29 @@ jQuery(document).ready(function($){
 		$(input).each(function(){
 			if($(this).val().length == 0){
 				$(this).toggleClass('has-error').next('span').toggleClass('is-visible');
+				boolean = false;
 			}
 		});
-
+		if(boolean){
+			$form_modal.removeClass('is-visible');
+			alertify.success("Usuario creado!");
+		}
 	});
 	
-	$form_signup.find('input[type="submit"]').on('click', function(event){
-		event.preventDefault();
-		var input = $form_signup.find('input.validation');
+	// $form_signup.find('input[type="submit"]').on('click', function(event){
+	// 	event.preventDefault();
+	// 	var input = $form_signup.find('input.validation');
 
-		$(input).each(function(){
-			$(this).removeClass('has-error').next('span').removeClass('is-visible');
-		});
+	// 	$(input).each(function(){
+	// 		$(this).removeClass('has-error').next('span').removeClass('is-visible');
+	// 	});
 		
-		$(input).each(function(){
-			if($(this).val().length == 0){
-				$(this).toggleClass('has-error').next('span').toggleClass('is-visible');
-			}
-		});
-	});
-
-	$form_forgot_password.find('input[type="submit"]').on('click', function(event){
-		event.preventDefault();
-		$form_forgot_password.find('');
-	});
-
+	// 	$(input).each(function(){
+	// 		if($(this).val().length == 0){
+	// 			$(this).toggleClass('has-error').next('span').toggleClass('is-visible');
+	// 		}
+	// 	});
+	// });
 
 	//IE9 placeholder fallback
 	//credits http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html

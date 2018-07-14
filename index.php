@@ -18,6 +18,8 @@ and open the template in the editor......
         <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/reset.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
         <link rel="stylesheet" href="css/modalLogin/modalLogin.css">
+        <link rel="stylesheet" href="/css/alertify/alertify.css">
+        <link rel="stylesheet" href="/css/alertify/themes/default.css">
     </head>
     <body>
             <div>
@@ -66,7 +68,7 @@ and open the template in the editor......
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width" type="submit" value="Iniciar sesión">
+						<input class="full-width" type="submit" value="Iniciar sesión" formulario="cd-login">
 					</p>
 				</form>
 				
@@ -114,12 +116,12 @@ and open the template in the editor......
 				<form class="cd-form">
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="reset-email">Correo</label>
-						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="Correo">
+						<input class="full-width has-padding has-border validation" id="reset-email" type="email" placeholder="Correo">
 						<span class="cd-error-message">Campo vacío</span>
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Restablecer contraseña">
+						<input class="full-width has-padding" type="submit" value="Restablecer contraseña" formulario="cd-reset-password">
 					</p>
 				</form>
 
@@ -251,6 +253,7 @@ and open the template in the editor......
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
         <script src="./js/velocity.min.js" type="text/javascript"></script>
         <script src="./js/Scrollmagic/plugins/animation.velocity.js" type="text/javascript"></script>
+        <script src="./js/alertify/alertify.js"></script>
         <script src="./js/Script.js" type="text/javascript"></script>
         <script  src="js/modalLogin/modalLogin.js"></script>
     </body>
