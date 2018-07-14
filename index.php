@@ -18,8 +18,8 @@ and open the template in the editor......
         <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/reset.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
         <link rel="stylesheet" href="css/modalLogin/modalLogin.css">
-        <link rel="stylesheet" href="/css/alertify/alertify.css">
-        <link rel="stylesheet" href="/css/alertify/themes/default.css">
+        <link rel="stylesheet" href="css/alertify/alertify.css">
+        <link rel="stylesheet" href="css/alertify/themes/default.css">
     </head>
     <body>
             <div>
@@ -103,7 +103,7 @@ and open the template in the editor......
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Crear Cuenta" formulario="cd-signup">
+						<input class="full-width has-padding" type="submit" value="Crear Cuenta" formulario="cd-signup" message="Cuenta creada">
 					</p>
 				</form>
 
@@ -121,7 +121,7 @@ and open the template in the editor......
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Restablecer contraseña" formulario="cd-reset-password">
+						<input class="full-width has-padding" type="submit" value="Restablecer contraseña" formulario="cd-reset-password" message="Contraseña restablecida">
 					</p>
 				</form>
 
@@ -251,10 +251,10 @@ and open the template in the editor......
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/jquery.ScrollMagic.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-        <script src="./js/velocity.min.js" type="text/javascript"></script>
-        <script src="./js/Scrollmagic/plugins/animation.velocity.js" type="text/javascript"></script>
-        <script src="./js/alertify/alertify.js"></script>
-        <script src="./js/Script.js" type="text/javascript"></script>
+        <script src="js/velocity.min.js" type="text/javascript"></script>
+        <script src="js/Scrollmagic/plugins/animation.velocity.js" type="text/javascript"></script>
+        <script src="js/alertify/alertify.js"></script>
+        <script src="js/Script.js" type="text/javascript"></script>
         <script  src="js/modalLogin/modalLogin.js"></script>
     </body>
 </html>

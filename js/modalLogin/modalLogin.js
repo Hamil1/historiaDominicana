@@ -100,7 +100,9 @@ jQuery(document).ready(function($){
 		});
 		if(boolean){
 			$form_modal.removeClass('is-visible');
-			alertify.success("Usuario creado!");
+			if($(this).attr("message")){
+				alertify.success($(this).attr('message'));
+			}
 		}
 	});
 	

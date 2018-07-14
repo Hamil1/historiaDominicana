@@ -116,13 +116,13 @@ ul.menu li a{
     display: block;
     width: 100%;
     font-family: 'Crimson Text', serif;
-    font-size: 1rem;
+    font-size: .85rem;
     transition: all .5s;
 }
 
 .menu li.active{
     border-left: 3px solid #e57933;
-    box-shadow: 20rem 0 #f2f2f2 inset;
+    box-shadow: 17rem 0 #f2f2f2 inset;
 }
 
 .menu li.active a{
