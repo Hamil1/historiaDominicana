@@ -29,4 +29,8 @@ $(document).ready(function(){
         $('nav#menu').toggleClass('mostrar');
         $(this).toggleClass('cerrar');
     });
+
+    $(document).on('click','button#agregarArticulo',function(){
+        $.post('/controladores/mainController.php');
+    });
 });

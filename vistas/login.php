@@ -1,29 +1,88 @@
-<div id="myModal" class="modal fade">
-	<div class="modal-dialog modal-login">
-		<div class="modal-content">
-			<div class="modal-header">				
-				<h4 class="modal-title">Iniciar sesión</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			</div>
-			<div class="modal-body">
-				<form action="/examples/actions/confirmation.php" method="post">
-					<div class="form-group">
-						<i class="fa fa-user"></i>
-						<input type="text" class="form-control" placeholder="Nombre de usuario" required="required">
-					</div>
-					<div class="form-group">
-						<i class="fa fa-lock"></i>
-						<input type="password" class="form-control" placeholder="Contraseña" required="required">					
-					</div>
-					<div class="form-group">
-						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Acceder">
-					</div>
-				</form>				
+<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Iniciar sesión</a></li>
+				<li><a href="#0">Crear cuenta</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">Correo electrónico</label>
+						<input class="full-width has-padding has-border validation" id="signin-email" type="email" placeholder="Correo electrónico">
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Contraseña</label>
+						<input class="full-width has-padding has-border validation" id="signin-password" type="password"  placeholder="Contraseña">
+						<span class="cd-error-message">Campo vacío</span>
+						<a href="#0" class="hide-password">Mostrar</a>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Recordar</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Iniciar sesión" formulario="cd-login">
+					</p>
+				</form>
 				
-			</div>
-			<div class="modal-footer">
-				<a href="#">¿Olvidaste tu contraseña?</a>
-			</div>
-		</div>
-	</div>
-</div>
+				<p class="cd-form-bottom-message"><a href="#0">¿Olvidaste tu contraseña?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- sign up form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Nombre de usuario</label>
+						<input class="full-width has-padding has-border validation" id="signup-username" type="text" placeholder="Nombre">
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">Correo electrónico</label>
+						<input class="full-width has-padding has-border validation" id="signup-email" type="email" placeholder="Correo electrónico">
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Contraseña</label>
+						<input class="full-width has-padding has-border validation" id="signup-password" type="password"  placeholder="Contraseña">
+						<span class="cd-error-message">Campo vacío</span>
+						<a href="#0" class="hide-password">Mostrar</a>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">Acepto los <a href="#0">términos</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Crear Cuenta" formulario="cd-signup" message="Cuenta creada">
+					</p>
+				</form>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">¿Perdiste tú contraseña? Introduce tú correo electrónico. Recibiras un correo para crear una contraseña nueva.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">Correo</label>
+						<input class="full-width has-padding has-border validation" id="reset-email" type="email" placeholder="Correo">
+						<span class="cd-error-message">Campo vacío</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Restablecer contraseña" formulario="cd-reset-password" message="Contraseña restablecida">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Volver a iniciar sesión</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">Cerrar</a>
+		</div> <!-- cd-user-modal-container -->
