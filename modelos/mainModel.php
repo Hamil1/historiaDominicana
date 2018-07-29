@@ -1,5 +1,5 @@
 <?php 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 class_alias('\RedBeanPHP\R','R');
 
