@@ -12,8 +12,14 @@ jQuery(document).ready(function($){
 
 	//open modal
 	$main_nav.on('click', function(event){
-		$form_modal.addClass('is-visible');	
-		login_selected();
+		setTimeout(function(){
+			$form_modal.addClass('is-visible');
+			setTimeout(function(){
+				$form_login.addClass('prueba');
+			},1000);
+			login_selected();
+		}, 2000);
+		
 	});
 
 	//close modal

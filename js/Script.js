@@ -30,9 +30,9 @@ $(document).ready(function(){
         $(this).toggleClass('cerrar');
     });
 
-    // $(document).on('click','button#agregarArticulo',function(){
-    //     $.post('controladores/mainController.php',{metodo: "iniciarSesion"} , function(data){
-    //         $('div#modalLog').html(data);
-    //     });
-    // });
+    $(document).on('click','button#agregarArticulo',function(){
+        $.post('controladores/mainController.php',{metodo: "iniciarSesion"} , function(data){
+            $('div#modalLog').html(data);
+        });
+    });
 });
