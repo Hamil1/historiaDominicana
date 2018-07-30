@@ -1,44 +1,41 @@
 jQuery(document).ready(function($){
 	var $form_modal = $('.cd-user-modal'),
-		$form_login = $form_modal.find('#cd-login'),
-		$form_signup = $form_modal.find('#cd-signup'),
-		$form_forgot_password = $form_modal.find('#cd-reset-password'),
+		$form_login = $('.cd-user-modal').find('#cd-login'),
+		$form_signup = $('.cd-user-modal').find('#cd-signup'),
+		$form_forgot_password = $('.cd-user-modal').find('#cd-reset-password'),
 		$form_modal_tab = $('.cd-switcher'),
-		$tab_login = $form_modal_tab.children('li').eq(0).children('a'),
-		$tab_signup = $form_modal_tab.children('li').eq(1).children('a'),
-		$forgot_password_link = $form_login.find('.cd-form-bottom-message a'),
-		$back_to_login_link = $form_forgot_password.find('.cd-form-bottom-message a'),
+		$tab_login = $('.cd-switcher').children('li').eq(0).children('a'),
+		$tab_signup = $('.cd-switcher').children('li').eq(1).children('a'),
+		$forgot_password_link = $('.cd-user-modal').find('#cd-login').find('.cd-form-bottom-message a'),
+		$back_to_login_link = $('.cd-user-modal').find('#cd-reset-password').find('.cd-form-bottom-message a'),
 		$main_nav = $('button#agregarArticulo');
 
 	//open modal
-	$main_nav.on('click', function(event){
+	$('button#agregarArticulo').on('click', function(event){
 		setTimeout(function(){
-			$form_modal.addClass('is-visible');
-			setTimeout(function(){
-				$form_login.addClass('prueba');
-			},1000);
+			$('.cd-user-modal').addClass('is-visible');
 			login_selected();
-		}, 2000);
+		}, 100);
 		
 	});
 
 	//close modal
 	$('.cd-user-modal').on('click', function(event){
-		if( $(event.target).is($form_modal) || $(event.target).is('.cd-close-form') ) {
-			$form_modal.removeClass('is-visible');
+		if( $(event.target).is($('.cd-user-modal')) || $(event.target).is('.cd-close-form') ) {
+			$('.cd-user-modal').removeClass('is-visible');
 		}	
 	});
 	//close modal when clicking the esc keyboard button
 	$(document).keyup(function(event){
     	if(event.which=='27'){
-    		$form_modal.removeClass('is-visible');
+    		$('.cd-user-modal').removeClass('is-visible');
 	    }
     });
 
 	//switch from a tab to another
-	$form_modal_tab.on('click', function(event) {
+	$('.cd-switcher').on('click', function(event) {
 		event.preventDefault();
-		( $(event.target).is( $tab_login ) ) ? login_selected() : signup_selected();
+		( $(event.target).is( $('.cd-switcher').children('li').eq(0).children('a') ) ) ? login_selected() : signup_selected();
 	});
 
 	//hide or show password
@@ -53,44 +50,44 @@ jQuery(document).ready(function($){
 	});
 
 	//show forgot-password form 
-	$forgot_password_link.on('click', function(event){
+	$('.cd-user-modal').find('#cd-login').find('.cd-form-bottom-message a').on('click', function(event){
 		event.preventDefault();
 		forgot_password_selected();
 	});
 
 	//back to login from the forgot-password form
-	$back_to_login_link.on('click', function(event){
+	$('.cd-user-modal').find('#cd-reset-password').find('.cd-form-bottom-message a').on('click', function(event){
 		event.preventDefault();
 		login_selected();
 	});
 
 	function login_selected(){
-		$form_login.addClass('is-selected');
-		$form_signup.removeClass('is-selected');
-		$form_forgot_password.removeClass('is-selected');
-		$tab_login.addClass('selected');
-		$tab_signup.removeClass('selected');
+		$('.cd-user-modal').find('#cd-login').addClass('is-selected');
+		$('.cd-user-modal').find('#cd-signup').removeClass('is-selected');
+		$('.cd-user-modal').find('#cd-reset-password').removeClass('is-selected');
+		$('.cd-switcher').children('li').eq(0).children('a').addClass('selected');
+		$('.cd-switcher').children('li').eq(1).children('a').removeClass('selected');
 	}
 
 	function signup_selected(){
-		$form_login.removeClass('is-selected');
-		$form_signup.addClass('is-selected');
-		$form_forgot_password.removeClass('is-selected');
-		$tab_login.removeClass('selected');
-		$tab_signup.addClass('selected');
+		$('.cd-user-modal').find('#cd-login').removeClass('is-selected');
+		$('.cd-user-modal').find('#cd-signup').addClass('is-selected');
+		$('.cd-user-modal').find('#cd-reset-password').removeClass('is-selected');
+		$('.cd-switcher').children('li').eq(0).children('a').removeClass('selected');
+		$('.cd-switcher').children('li').eq(1).children('a').addClass('selected');
 	}
 
 	function forgot_password_selected(){
-		$form_login.removeClass('is-selected');
-		$form_signup.removeClass('is-selected');
-		$form_forgot_password.addClass('is-selected');
+		$('.cd-user-modal').find('#cd-login').removeClass('is-selected');
+		$('.cd-user-modal').find('#cd-signup').removeClass('is-selected');
+		$('.cd-user-modal').find('#cd-reset-password').addClass('is-selected');
 	}
 
-	//REMOVE THIS - it's just to show error messages 
-	$form_modal.find('input[type="submit"]').on('click', function(event){
+	//REMOVE THIS - it's just to show error messages (Hecho por Victor Diaz)
+	$('.cd-user-modal').find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
 		var formulario = $(this).attr('formulario'),
-		form = $form_modal.find('#' + formulario),
+		form = $('.cd-user-modal').find('#' + formulario),
 		input = form.find('input.validation'),
 		boolean = true;
 
@@ -105,7 +102,7 @@ jQuery(document).ready(function($){
 			}
 		});
 		if(boolean){
-			$form_modal.removeClass('is-visible');
+			$('.cd-user-modal').removeClass('is-visible');
 			if($(this).attr("message")){
 				alertify.success($(this).attr('message'));
 			}

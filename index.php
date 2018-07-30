@@ -142,7 +142,7 @@ include_once("vendor/autoload.php");
                         varias veces volver a dominar la recién creada república con resultados fallidos hasta que en 1867 Haití reconoció la
                         independencia dominicana.</p>
                         <div>
-                            <img src="./imagenes/padresDeLaPatria.jpeg" alt="Padres de la patria" class="padresdelapatria">
+                            <img src="imagenes/padresDeLaPatria.jpeg" alt="Padres de la patria" class="padresdelapatria">
                         </div>
                         <p>
                             La palabra Dominicana proviene del latín Dominicus, que significa Domingo. Sin embargo, la isla tiene este nombre por
