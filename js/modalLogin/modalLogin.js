@@ -50,13 +50,13 @@ jQuery(document).ready(function($){
 	});
 
 	//show forgot-password form 
-	$('.cd-user-modal').find('#cd-login').find('.cd-form-bottom-message a').on('click', function(event){
+	$('.cd-user-modal div#cd-login').find('.cd-form-bottom-message a').on('click', function(event){
 		event.preventDefault();
 		forgot_password_selected();
 	});
 
 	//back to login from the forgot-password form
-	$('.cd-user-modal').find('#cd-reset-password').find('.cd-form-bottom-message a').on('click', function(event){
+	$('.cd-user-modal div#cd-reset-password').find('.cd-form-bottom-message a').on('click', function(event){
 		event.preventDefault();
 		login_selected();
 	});
@@ -70,6 +70,7 @@ jQuery(document).ready(function($){
 	}
 
 	function signup_selected(){
+		console.log("Esta entrando signup");
 		$('.cd-user-modal').find('#cd-login').removeClass('is-selected');
 		$('.cd-user-modal').find('#cd-signup').addClass('is-selected');
 		$('.cd-user-modal').find('#cd-reset-password').removeClass('is-selected');
