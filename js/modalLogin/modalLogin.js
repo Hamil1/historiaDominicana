@@ -70,7 +70,6 @@ jQuery(document).ready(function($){
 	}
 
 	function signup_selected(){
-		console.log("Esta entrando signup");
 		$('.cd-user-modal').find('#cd-login').removeClass('is-selected');
 		$('.cd-user-modal').find('#cd-signup').addClass('is-selected');
 		$('.cd-user-modal').find('#cd-reset-password').removeClass('is-selected');
