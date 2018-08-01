@@ -9,10 +9,12 @@ jQuery(document).ready(function($){
 		$forgot_password_link = $('.cd-user-modal').find('#cd-login').find('.cd-form-bottom-message a'),
 		$back_to_login_link = $('.cd-user-modal').find('#cd-reset-password').find('.cd-form-bottom-message a'),
 		$main_nav = $('button#agregarArticulo');
+		console.log("El documento modalLogin.js está cargado");
 
 	//open modal
-	$('button#agregarArticulo').on('click', function(event){
+	$(document).on('click','button#agregarArticulo',function(event){
 		setTimeout(function(){
+			console.log($('.cd-switcher').children('li').eq(0).children('a').text());
 			$('.cd-user-modal').addClass('is-visible');
 			login_selected();
 		}, 100);
@@ -20,7 +22,7 @@ jQuery(document).ready(function($){
 	});
 
 	//close modal
-	$('.cd-user-modal').on('click', function(event){
+	$(document).on('click','.cd-user-modal',function(event){
 		if( $(event.target).is($('.cd-user-modal')) || $(event.target).is('.cd-close-form') ) {
 			$('.cd-user-modal').removeClass('is-visible');
 		}	
@@ -33,13 +35,13 @@ jQuery(document).ready(function($){
     });
 
 	//switch from a tab to another
-	$('.cd-switcher').on('click', function(event) {
+	$(document).on('click','.cd-switcher', function(event) {
 		event.preventDefault();
-		( $(event.target).is( $('.cd-switcher').children('li').eq(0).children('a') ) ) ? login_selected() : signup_selected();
+		($(event.target).is($('.cd-switcher').children('li').eq(0).children('a'))) ? login_selected() : signup_selected();
 	});
 
 	//hide or show password
-	$('.hide-password').on('click', function(){
+	$(document).on('click','.hide-password',function(){
 		var $this= $(this),
 			$password_field = $this.siblings('input');
 		
@@ -50,13 +52,13 @@ jQuery(document).ready(function($){
 	});
 
 	//show forgot-password form 
-	$('.cd-user-modal div#cd-login').find('.cd-form-bottom-message a').on('click', function(event){
+	$(document).on('click','.cd-user-modal div#cd-login .cd-form-bottom-message a',function(event){
 		event.preventDefault();
 		forgot_password_selected();
 	});
 
 	//back to login from the forgot-password form
-	$('.cd-user-modal div#cd-reset-password').find('.cd-form-bottom-message a').on('click', function(event){
+	$(document).on('click','.cd-user-modal div#cd-reset-password .cd-form-bottom-message a',function(event){
 		event.preventDefault();
 		login_selected();
 	});
@@ -84,7 +86,7 @@ jQuery(document).ready(function($){
 	}
 
 	//REMOVE THIS - it's just to show error messages (Hecho por Victor Diaz)
-	$('.cd-user-modal').find('input[type="submit"]').on('click', function(event){
+	$(document).on('click','div.cd-user-modal input[type="submit"]',function(event){
 		event.preventDefault();
 		var formulario = $(this).attr('formulario'),
 		form = $('.cd-user-modal').find('#' + formulario),
