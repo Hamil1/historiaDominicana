@@ -5,7 +5,7 @@
 			</ul>
 
 			<div id="cd-login"> <!-- log in form -->
-				<form class="cd-form">
+				<form class="cd-form-login">
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signin-email">Correo electrónico</label>
 						<input class="full-width has-padding has-border validation" id="signin-email" type="email" placeholder="Correo electrónico">
@@ -34,22 +34,22 @@
 			</div> <!-- cd-login -->
 
 			<div id="cd-signup"> <!-- sign up form -->
-				<form class="cd-form">
+				<form id="signup" class="cd-form-signup">
 					<p class="fieldset">
 						<label class="image-replace cd-username" for="signup-username">Nombre de usuario</label>
-						<input class="full-width has-padding has-border validation" id="signup-username" type="text" placeholder="Nombre">
+						<input class="full-width has-padding has-border validation" id="signup-username" name="nombre" type="text" placeholder="Nombre">
 						<span class="cd-error-message">Campo vacío</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signup-email">Correo electrónico</label>
-						<input class="full-width has-padding has-border validation" id="signup-email" type="email" placeholder="Correo electrónico">
+						<input class="full-width has-padding has-border validation" id="signup-email" name="correo" type="email" placeholder="Correo electrónico">
 						<span class="cd-error-message">Campo vacío</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signup-password">Contraseña</label>
-						<input class="full-width has-padding has-border validation" id="signup-password" type="password"  placeholder="Contraseña">
+						<input class="full-width has-padding has-border validation" id="signup-password" name="contrasena" type="password"  placeholder="Contraseña">
 						<span class="cd-error-message">Campo vacío</span>
 						<a href="#0" class="hide-password">Mostrar</a>
 					</p>
@@ -70,7 +70,7 @@
 			<div id="cd-reset-password"> <!-- reset password form -->
 				<p class="cd-form-message">¿Perdiste tú contraseña? Introduce tú correo electrónico. Recibiras un correo para crear una contraseña nueva.</p>
 
-				<form class="cd-form">
+				<form class="cd-form-reset-password">
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="reset-email">Correo</label>
 						<input class="full-width has-padding has-border validation" id="reset-email" type="email" placeholder="Correo">

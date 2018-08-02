@@ -22,5 +22,9 @@
             
         }
 
+        public function crearUsuario(){
+            
+        }
+
     }
 ?>
