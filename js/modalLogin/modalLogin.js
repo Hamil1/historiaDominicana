@@ -16,7 +16,9 @@ jQuery(document).ready(function($){
 		setTimeout(function(){
 			console.log($('.cd-switcher').children('li').eq(0).children('a').text());
 			$('.cd-user-modal').addClass('is-visible');
-			login_selected();
+			setTimeout(function(){
+				login_selected();
+			},10);
 		}, 100);
 		
 	});

@@ -86,4 +86,3 @@
 			</div> <!-- cd-reset-password -->
 			<a href="#0" class="cd-close-form">Cerrar</a>
 		</div> <!-- cd-user-modal-container -->
-		<script  src="js/modalLogin/modalLogin.js"></script>
