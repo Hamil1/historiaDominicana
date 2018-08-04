@@ -5,7 +5,7 @@
 			</ul>
 
 			<div id="cd-login"> <!-- log in form -->
-				<form class="cd-form-login">
+				<form class="cd-form">
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signin-email">Correo electrónico</label>
 						<input class="full-width has-padding has-border validation" id="signin-email" type="email" placeholder="Correo electrónico">
@@ -34,7 +34,7 @@
 			</div> <!-- cd-login -->
 
 			<div id="cd-signup"> <!-- sign up form -->
-				<form id="signup" class="cd-form-signup">
+				<form id="signup" class="cd-form">
 					<p class="fieldset">
 						<label class="image-replace cd-username" for="signup-username">Nombre de usuario</label>
 						<input class="full-width has-padding has-border validation" id="signup-username" name="nombre" type="text" placeholder="Nombre">
@@ -45,6 +45,7 @@
 						<label class="image-replace cd-email" for="signup-email">Correo electrónico</label>
 						<input class="full-width has-padding has-border validation" id="signup-email" name="correo" type="email" placeholder="Correo electrónico">
 						<span class="cd-error-message">Campo vacío</span>
+						<span class="cd-error-message correo">El correo esta mal</span>
 					</p>
 
 					<p class="fieldset">
@@ -70,7 +71,7 @@
 			<div id="cd-reset-password"> <!-- reset password form -->
 				<p class="cd-form-message">¿Perdiste tú contraseña? Introduce tú correo electrónico. Recibiras un correo para crear una contraseña nueva.</p>
 
-				<form class="cd-form-reset-password">
+				<form class="cd-form">
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="reset-email">Correo</label>
 						<input class="full-width has-padding has-border validation" id="reset-email" type="email" placeholder="Correo">

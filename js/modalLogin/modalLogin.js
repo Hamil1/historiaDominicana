@@ -9,12 +9,17 @@ jQuery(document).ready(function($){
 		$forgot_password_link = $('.cd-user-modal').find('#cd-login').find('.cd-form-bottom-message a'),
 		$back_to_login_link = $('.cd-user-modal').find('#cd-reset-password').find('.cd-form-bottom-message a'),
 		$main_nav = $('button#agregarArticulo');
-		console.log("El documento modalLogin.js está cargado");
+
+	//Validando el formato del correo
+	$(document).on('focus','input#signup-password',function(){
+		var correo = $('div#cd-signup input#signup-email').val();
+		console.log("Este es el correo: " + correo);
+		validarEmail(correo);
+	});
 
 	//open modal
 	$(document).on('click','button#agregarArticulo',function(event){
 		setTimeout(function(){
-			console.log($('.cd-switcher').children('li').eq(0).children('a').text());
 			$('.cd-user-modal').addClass('is-visible');
 			setTimeout(function(){
 				login_selected();
@@ -152,6 +157,15 @@ jQuery(document).ready(function($){
 		});
 	}
 
+	function validarEmail(valor) {
+		if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
+		 $('form#signup span.cd-error-message.correo').removeClass('is-visible');
+		} else {
+			$('form#signup span.cd-error-message.correo').addClass('is-visible');
+		}
+	  }
+
+	console.log("El documento modalLogin.js está cargado");
 });
 
 
