@@ -37,10 +37,7 @@ $(document).ready(function(){
     });
 
     $(document).on('click','input[formulario="cd-signup"]',function(){
-        var nombre = $('input#signup-username').val(),
-        correo = $('input#signup-email').val(),
-        contrasena = $('input#signup-password').val(),
-        datos = $('#signup').serialize();
+        var datos = $('#signup').serialize();
         datos += "&metodo=crearUsuario";
         // datos.push({metodo: "crearUsuario"});
         $.ajax({
