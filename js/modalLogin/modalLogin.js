@@ -10,13 +10,6 @@ jQuery(document).ready(function($){
 		$back_to_login_link = $('.cd-user-modal').find('#cd-reset-password').find('.cd-form-bottom-message a'),
 		$main_nav = $('button#agregarArticulo');
 
-	//Validando el formato del correo
-	$(document).on('focus','input#signup-password',function(){
-		var correo = $('div#cd-signup input#signup-email').val();
-		console.log("Este es el correo: " + correo);
-		validarEmail(correo);
-	});
-
 	//open modal
 	$(document).on('click','button#agregarArticulo',function(event){
 		setTimeout(function(){
@@ -99,39 +92,26 @@ jQuery(document).ready(function($){
 		form = $('.cd-user-modal').find('#' + formulario),
 		input = form.find('input.validation'),
 		boolean = true;
-
-		$(input).each(function(){
-			$(this).removeClass('has-error').next('span').removeClass('is-visible');
-		});
 		
 		$(input).each(function(){
 			if($(this).val().length == 0){
 				$(this).toggleClass('has-error').next('span').toggleClass('is-visible');
+				$('span.cd-error-message').filter('.correo').removeClass('is-visible');
 				boolean = false;
+			}else if($(this).hasClass('correo')){
+				if(!validarEmail($(this).val())){
+					$(this).toggleClass('has-error').next('span').toggleClass('is-visible');
+					boolean = false;
+				}
 			}
 		});
 		if(boolean){
-			$('.cd-user-modal').removeClass('is-visible');
+			$('.cd-user-modal').removeClass('is-visible'); //Esto es lo que determina si se cierra el modal
 			if($(this).attr("message")){
 				alertify.success($(this).attr('message'));
 			}
 		}
 	});
-	
-	// $form_signup.find('input[type="submit"]').on('click', function(event){
-	// 	event.preventDefault();
-	// 	var input = $form_signup.find('input.validation');
-
-	// 	$(input).each(function(){
-	// 		$(this).removeClass('has-error').next('span').removeClass('is-visible');
-	// 	});
-		
-	// 	$(input).each(function(){
-	// 		if($(this).val().length == 0){
-	// 			$(this).toggleClass('has-error').next('span').toggleClass('is-visible');
-	// 		}
-	// 	});
-	// });
 
 	//IE9 placeholder fallback
 	//credits http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
@@ -160,8 +140,10 @@ jQuery(document).ready(function($){
 	function validarEmail(valor) {
 		if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
 		 $('form#signup span.cd-error-message.correo').removeClass('is-visible');
+		 return true;
 		} else {
 			$('form#signup span.cd-error-message.correo').addClass('is-visible');
+			return false;
 		}
 	  }
 
