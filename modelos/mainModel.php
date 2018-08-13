@@ -17,6 +17,10 @@ class mainModel{
         R::store($usuario);
     }
 
+    public function iniciarSesion($correo, $contrasena){//Este método es el que valida las credenciales y permite al usuario logearse.
+        
+    }
+
 }
 
 ?>
