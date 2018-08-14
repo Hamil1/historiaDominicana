@@ -18,7 +18,6 @@ jQuery(document).ready(function($){
 				login_selected();
 			},10);
 		}, 100);
-		
 	});
 
 	//close modal
