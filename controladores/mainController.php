@@ -16,7 +16,14 @@
 
         public function iniciarSesion(){
             $modelo = new mainModel();
-            include_once "../vistas/login.php";
+            $correo = (isset($_POST['correo']))?$_POST['correo']:false;
+            $contrasena = (isset($_POST['contrasena']))?$_POST['contrasena']:false;
+            
+            if($correo == false && $contrasena == false){
+                include_once "../vistas/login.php";
+            }else{
+                $modelo->iniciarSesion($correo, $contrasena);
+            }
         }
 
         public function agregarArticulo(){

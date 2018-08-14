@@ -3,24 +3,24 @@
 				<li><a href="#0">Iniciar sesión</a></li>
 				<li><a href="#0">Crear cuenta</a></li>
 			</ul>
-
+			
 			<div id="cd-login"> <!-- log in form -->
-				<form class="cd-form">
+				<form id="login" class="cd-form">
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signin-email">Correo electrónico</label>
-						<input class="full-width has-padding has-border validation" id="signin-email" type="email" placeholder="Correo electrónico">
+						<input name="correo" class="full-width has-padding has-border validation" id="signin-email" type="email" placeholder="Correo electrónico">
 						<span class="cd-error-message">Campo vacío</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signin-password">Contraseña</label>
-						<input class="full-width has-padding has-border validation" id="signin-password" type="password"  placeholder="Contraseña">
+						<input name="contrasena" class="full-width has-padding has-border validation" id="signin-password" type="password"  placeholder="Contraseña">
 						<span class="cd-error-message">Campo vacío</span>
 						<a href="#0" class="hide-password">Mostrar</a>
 					</p>
 
 					<p class="fieldset">
-						<input type="checkbox" id="remember-me" checked>
+						<input name="recordar" type="checkbox" id="remember-me" checked>
 						<label for="remember-me">Recordar</label>
 					</p>
 

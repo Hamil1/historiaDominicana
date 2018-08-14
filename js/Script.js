@@ -39,7 +39,17 @@ $(document).ready(function(){
     $(document).on('click','input[formulario="cd-signup"]',function(){
         var datos = $('#signup').serialize();
         datos += "&metodo=crearUsuario";
-        // datos.push({metodo: "crearUsuario"});
+        $.ajax({
+            type: "POST",
+            url: "controladores/mainController.php",
+            data: datos,
+            dataType: "json"
+        });
+    });
+
+    $(document).on('click','input[formulario="cd-login"]',function(){
+        var datos = $('form#login').serialize();
+        datos += "&metodo=iniciarSesion";
         $.ajax({
             type: "POST",
             url: "controladores/mainController.php",

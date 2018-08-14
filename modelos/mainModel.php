@@ -18,7 +18,8 @@ class mainModel{
     }
 
     public function iniciarSesion($correo, $contrasena){//Este método es el que valida las credenciales y permite al usuario logearse.
-        
+        $usuario = R::getAll("SELECT * FROM usuarios WHERE correo = '".$correo."' AND contrasena = '".$correo."'");
+        print_r($usuario);
     }
 
 }
