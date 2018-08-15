@@ -43,7 +43,7 @@
 
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signup-email">Correo electrónico</label>
-						<input class="full-width has-padding has-border validation correo" id="signup-email" name="correo" type="email" placeholder="Correo electrónico">
+						<input class="full-width has-padding has-border validation correo" id="signup-email" correoRegistro="correoRegistro" name="correo" type="email" placeholder="Correo electrónico">
 						<span class="cd-error-message">Campo vacío</span>
 						<span class="cd-error-message correo">El correo está incorrecto</span>
 					</p>

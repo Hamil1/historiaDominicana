@@ -1,3 +1,13 @@
+function validarEmail(valor) {
+	if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
+	 $('form#signup span.cd-error-message.correo').removeClass('is-visible');
+	 return true;
+	} else {
+		$('form#signup span.cd-error-message.correo').addClass('is-visible');
+		return false;
+	}
+  }
+
 jQuery(document).ready(function($){
 	var $form_modal = $('.cd-user-modal'),
 		$form_login = $('.cd-user-modal').find('#cd-login'),
@@ -135,17 +145,6 @@ jQuery(document).ready(function($){
 		  	})
 		});
 	}
-
-	function validarEmail(valor) {
-		if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
-		 $('form#signup span.cd-error-message.correo').removeClass('is-visible');
-		 return true;
-		} else {
-			$('form#signup span.cd-error-message.correo').addClass('is-visible');
-			return false;
-		}
-	  }
-
 	console.log("El documento modalLogin.js está cargado");
 });
 

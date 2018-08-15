@@ -172,7 +172,7 @@ include_once("vendor/autoload.php");
         <script src="js/velocity.min.js" type="text/javascript"></script>
         <script src="js/Scrollmagic/plugins/animation.velocity.js" type="text/javascript"></script>
         <script src="js/alertify/alertify.js"></script>
-        <script src="js/Script.js" type="text/javascript"></script>
         <script  src="js/modalLogin/modalLogin.js"></script>
+        <script src="js/Script.js" type="text/javascript"></script>
     </body>
 </html>

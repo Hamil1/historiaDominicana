@@ -39,14 +39,16 @@ $(document).ready(function(){
     $(document).on('click','input[formulario="cd-signup"]',function(){
         var datos = $('#signup').serialize();
         datos += "&metodo=crearUsuario";
-        $.ajax({
-            type: "POST",
-            url: "controladores/mainController.php",
-            data: datos,
-            dataType: "json"
-        });
+        if(validarEmail($('form#signup input[type="email"]').val())){
+            $.ajax({
+                type: "POST",
+                url: "controladores/mainController.php",
+                data: datos,
+                dataType: "json"
+            });
+        }
     });
-
+    
     $(document).on('click','input[formulario="cd-login"]',function(){
         var datos = $('form#login').serialize();
         datos += "&metodo=iniciarSesion";
@@ -56,5 +58,6 @@ $(document).ready(function(){
             data: datos,
             dataType: "json"
         });
+        
     });
 });
