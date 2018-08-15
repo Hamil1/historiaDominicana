@@ -61,7 +61,7 @@
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Crear Cuenta" formulario="cd-signup" message="Cuenta creada">
+						<input class="full-width has-padding" type="submit" value="Crear Cuenta" formulario="cd-signup">
 					</p>
 				</form>
 

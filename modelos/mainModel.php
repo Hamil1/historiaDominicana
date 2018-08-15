@@ -19,7 +19,11 @@ class mainModel{
 
     public function iniciarSesion($correo, $contrasena){//Este método es el que valida las credenciales y permite al usuario logearse.
         $usuario = R::getAll("SELECT * FROM usuarios WHERE correo = '".$correo."' AND contrasena = '".sha1($contrasena)."'");
-        print_r($usuario);
+        $registro = count($usuario);
+        if(count($usuario) == 0){
+            $mensaje = array("message"=>"El correo o la contraseña introducida no concuerda con ninguna cuenta.","option"=>"error");
+            echo json_encode($mensaje);
+        }
     }
 
 }
