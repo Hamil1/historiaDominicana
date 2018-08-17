@@ -9,12 +9,20 @@ class mainModel{
     }
 
     public function crearUsuario($nombre, $correo, $contrasena, $fecha_creacion = false){
-        $usuario = R::dispense('usuarios');
-        $usuario->nombre = $nombre;
-        $usuario->correo = $correo;
-        $usuario->contrasena = sha1($contrasena);
-        $usuario->fecha_creacion = (!$fecha_creacion)?time():$fecha_creacion;
-        R::store($usuario);
+        
+        try{
+            $usuario = R::dispense('usuarios');
+            $usuario->nombre = $nombre;
+            $usuario->correo = $correo;
+            $usuario->contrasena = sha1($contrasena);
+            $usuario->fecha_creacion = (!$fecha_creacion)?time():$fecha_creacion;
+            R::store($usuario);
+            $mensaje = array("message"=>"Cuenta creada.","option"=>"success");
+            echo json_encode($mensaje);
+        }catch(Exception $e){
+            $mensaje = array("message"=>"Problemas en el servidor. Contacte al administrador.","option"=>"error");
+            echo json_encode($mensaje);
+        }
     }
 
     public function iniciarSesion($correo, $contrasena){//Este método es el que valida las credenciales y permite al usuario logearse.
@@ -22,6 +30,9 @@ class mainModel{
         $registro = count($usuario);
         if(count($usuario) == 0){
             $mensaje = array("message"=>"El correo o la contraseña introducida no concuerda con ninguna cuenta.","option"=>"error");
+            echo json_encode($mensaje);
+        }else if(count($usuario) >= 1){
+            $mensaje = array("message"=>"Sesión iniciada","option"=>"success");
             echo json_encode($mensaje);
         }
     }

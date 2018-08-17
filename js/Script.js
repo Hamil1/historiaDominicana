@@ -45,6 +45,8 @@ $(document).ready(function(){
                 url: "controladores/mainController.php",
                 data: datos,
                 dataType: "json"
+            }).done(function(data){
+                (data.option == 'error')?alertify.error(data.message):alertify.success(data.message);
             });
         }
     });
@@ -57,7 +59,8 @@ $(document).ready(function(){
             url: "controladores/mainController.php",
             data: datos,
             dataType: "json"
+        }).done(function(data){
+            (data.option == 'error')?alertify.error(data.message):alertify.success(data.message);
         });
-        
     });
 });
