@@ -201,3 +201,18 @@ div.letras h2{
     font-size: 2rem;
 }
 
+button.accederLogin{
+    
+    border: 0;
+    padding: 13px;
+    color: white;
+    background-color: #fd9a59;
+    border-radius: 10px;
+    float: right;
+}
+
+button.accederLogin:hover{
+    cursor: pointer;
+    color: white;
+}
+
