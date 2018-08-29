@@ -18,10 +18,10 @@ jQuery(document).ready(function($){
 		$tab_signup = $('.cd-switcher').children('li').eq(1).children('a'),
 		$forgot_password_link = $('.cd-user-modal').find('#cd-login').find('.cd-form-bottom-message a'),
 		$back_to_login_link = $('.cd-user-modal').find('#cd-reset-password').find('.cd-form-bottom-message a'),
-		$main_nav = $('button#agregarArticulo');
+		$main_nav = $('button#iniciarSesion');
 
 	//open modal
-	$(document).on('click','button#agregarArticulo',function(event){
+	$(document).on('click','button#iniciarSesion',function(event){
 		setTimeout(function(){
 			$('.cd-user-modal').addClass('is-visible');
 			setTimeout(function(){

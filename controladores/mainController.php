@@ -23,6 +23,8 @@
                 include_once "../vistas/login.php";
             }else{
                 $modelo->iniciarSesion($correo, $contrasena);
+                session_start();
+                $_SESSION['correo'] = $correo;
             }
         }
 

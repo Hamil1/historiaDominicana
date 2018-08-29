@@ -30,7 +30,7 @@ $(document).ready(function(){
         $(this).toggleClass('cerrar');
     });
 
-    $(document).on('click','button#agregarArticulo',function(){
+    $(document).on('click','button#iniciarSesion',function(){
         $.post('controladores/mainController.php',{metodo: "iniciarSesion"} , function(data){
             $('div#modalLog').html(data);
         });
@@ -61,6 +61,7 @@ $(document).ready(function(){
             dataType: "json"
         }).done(function(data){
             (data.option == 'error')?alertify.error(data.message):alertify.success(data.message);
+            $('div#contenedorAcceder').html(data.boton);
         });
     });
 });

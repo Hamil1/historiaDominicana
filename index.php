@@ -28,8 +28,8 @@ include_once("vendor/autoload.php");
     </head>
     <body>
             <div>
-                <div class="contenedorAcceder">
-                    <span data-toggle="modal"><button id="agregarArticulo" data-toggle="modal" class="accederLogin cd-signin" data-toggle="tooltip" title="Iniciar sesión" data-placement="left">Iniciar sesión</button></span>
+                <div id="contenedorAcceder" class="contenedorAcceder">
+                    <span data-toggle="modal"><button id="iniciarSesion" data-toggle="modal" class="accederLogin cd-signin" data-toggle="tooltip" title="Iniciar sesión" data-placement="left">Iniciar sesión</button></span>
                     <!-- <span data-toggle="modal"><button id="agregarArticulo" data-toggle="modal" class="btn acceder cd-signin" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span> -->
                 </div>
             </div>

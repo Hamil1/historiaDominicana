@@ -29,11 +29,13 @@ class mainModel{
         $usuario = R::getAll("SELECT * FROM usuarios WHERE correo = '".$correo."' AND contrasena = '".sha1($contrasena)."'");
         $registro = count($usuario);
         if(count($usuario) == 0){
-            $mensaje = array("message"=>"El correo o la contraseña introducida no concuerda con ninguna cuenta.","option"=>"error");
+            $mensaje = array("message"=>"El correo o la contraseña introducida no concuerda con ninguna cuenta.","option"=>"error","boton"=>'<span data-toggle="modal"><button id="iniciarSesion" data-toggle="modal" class="accederLogin cd-signin" data-toggle="tooltip" title="Iniciar sesión" data-placement="left">Iniciar sesión</button></span>');
             echo json_encode($mensaje);
+            return false;
         }else if(count($usuario) >= 1){
-            $mensaje = array("message"=>"Sesión iniciada","option"=>"success");
+            $mensaje = array("message"=>"Sesión iniciada","option"=>"success","boton"=>'<span data-toggle="modal"><button id="agregarArticulo" data-toggle="modal" class="btn acceder cd-signin" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span>');
             echo json_encode($mensaje);
+            return true;
         }
     }
 
