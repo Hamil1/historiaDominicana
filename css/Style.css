@@ -169,7 +169,6 @@ div#mostrarNav.cerrar{
 }
 
 button.acceder{
-    float: right;
     background-color: #e57933;
     color: #ffffff;
     font-weight: normal;
@@ -202,13 +201,11 @@ div.letras h2{
 }
 
 button.accederLogin{
-    
     border: 0;
     padding: 13px;
     color: white;
     background-color: #fd9a59;
     border-radius: 10px;
-    float: right;
 }
 
 button.accederLogin:hover{
@@ -216,3 +213,21 @@ button.accederLogin:hover{
     color: white;
 }
 
+a.cerrarSesion{
+    color: #e57933;
+    text-decoration: none;
+}
+
+a.cerrarSesion:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: #e57933;
+}
+
+span.agregarArticulo{
+    padding-right: 0.5em;
+}
+
+div.botonesLogin{
+    float: right;
+}

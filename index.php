@@ -29,7 +29,17 @@ include_once("vendor/autoload.php");
     <body>
             <div>
                 <div id="contenedorAcceder" class="contenedorAcceder">
-                    <span data-toggle="modal"><button id="iniciarSesion" data-toggle="modal" class="accederLogin cd-signin" data-toggle="tooltip" title="Iniciar sesión" data-placement="left">Iniciar sesión</button></span>
+                    <div id="botonesLogin" class="botonesLogin">
+                        
+                        <?php 
+                            if(isset($_SESSION['login'])){ //Aqui no se usa session_start() porque ya está activado en php.ini?>
+                                <span data-toggle="modal" class="agregarArticulo"><button id="agregarArticulo" data-toggle="modal" class="btn acceder cd-signin" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span><a id="cerrarSesion" class="cerrarSesion">Cerrar sesión</a>
+                                <?php
+                            }else{ ?>
+                                <span data-toggle="modal"><button id="iniciarSesion" data-toggle="modal" class="accederLogin cd-signin" data-toggle="tooltip" title="Iniciar sesión" data-placement="left">Iniciar sesión</button></span>
+                           <?php }
+                        ?>
+                    </div>
                     <!-- <span data-toggle="modal"><button id="agregarArticulo" data-toggle="modal" class="btn acceder cd-signin" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span> -->
                 </div>
             </div>

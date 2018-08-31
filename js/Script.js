@@ -61,7 +61,18 @@ $(document).ready(function(){
             dataType: "json"
         }).done(function(data){
             (data.option == 'error')?alertify.error(data.message):alertify.success(data.message);
-            $('div#contenedorAcceder').html(data.boton);
+            $('div#botonesLogin').html(data.boton);
+        });
+    });
+
+    $(document).on('click','a#cerrarSesion',function(){
+        $.ajax({
+            type: "POST",
+            url: "controladores/mainController.php",
+            data: "metodo=cerrarSesion",
+            dataType: "json"
+        }).done(function(data){
+            $('div#botonesLogin').html(data.boton);
         });
     });
 });
