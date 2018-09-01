@@ -8,6 +8,7 @@
 $(document).ready(function(){
     console.log("El documento 'Script' de Historia Dominicana está listo.");
 
+    CKEDITOR.replace('cuerpoArticulo');
     $('[data-toggle="tooltip"]').tooltip();
 
     var controller = new ScrollMagic.Controller(); //Controlador de Scroll Magic

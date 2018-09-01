@@ -17,7 +17,8 @@ include_once("vendor/autoload.php");
         <link rel="stylesheet" type="text/css" href="css/Style.css">
         <link rel="stylesheet" type="text/css" href="css/modalLogin.css">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/reset.css">
@@ -34,7 +35,7 @@ include_once("vendor/autoload.php");
                         
                         <?php 
                             if(isset($_SESSION['login'])){ //Aqui no se usa session_start() porque ya está activado en php.ini?>
-                                <span data-toggle="modal" class="agregarArticulo"><button id="agregarArticulo" data-targe="#fullHeightModalBottom" class="btn acceder cd-signin" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span><a id="cerrarSesion" class="cerrarSesion">Cerrar sesión</a>
+                                <span data-toggle="tooltip" class="agregarArticulo"><button id="agregarArticulo" data-target="#fullHeightModalBottom" data-toggle="modal" class="btn acceder cd-signin waves-effect waves-light" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span><a id="cerrarSesion" class="cerrarSesion">Cerrar sesión</a>
                                 <?php
                             }else{ ?>
                                 <span data-toggle="modal"><button id="iniciarSesion" data-toggle="modal" class="accederLogin cd-signin" data-toggle="tooltip" title="Iniciar sesión" data-placement="left">Iniciar sesión</button></span>
@@ -57,29 +58,31 @@ include_once("vendor/autoload.php");
                 </nav>
             </header>
 <!-- Full Height Modal Right -->
-<div class="modal fade bottom" id="fullHeightModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade bottom" id="fullHeightModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-full-height modal-bottom" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header magenta">
+            <h4 class="modal-title w-100" id="myModalLabel">Agregar Articulo</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" style="color:white">×</span>
+            </button>
+          </div>
+          <!--Body-->
+          <div class="modal-body">
+            <textarea name="cuerpoArticulo" id="cuerpoArticulo" cols="30" rows="10"></textarea>
 
-    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-    <div class="modal-dialog modal-full-height modal-bottom" role="document">
-
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          </div>
+          <!--Footer-->
+          <div class="modal-footer">
+            <button type="button" class="btn botonRojo waves-effect waves-light" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn botonMagenta waves-effect waves-light">Guardar cambios</button>
+          </div>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+        <!--/.Content-->
       </div>
     </div>
-  </div>
   <!-- Full Height Modal Right -->
 
 <div class="cd-user-modal" id="modalLog"> <!-- this is the entire modal form, including the background -->
@@ -119,7 +122,7 @@ include_once("vendor/autoload.php");
 
         <div class="letras">
             <article class="marginCenter maxWidth letras first">
-                <h2 class="center bold ">Historia de la Republica Dominicana</h2>
+                <h2 class="center bold ">Historia de la República Dominicana</h2>
                         <div class="magic"></div>
                     <div class="desarrolloArticulo " style="overflow: hidden !important">
                         <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos.
@@ -144,7 +147,7 @@ include_once("vendor/autoload.php");
         </div>
         <div class="letras">
             <article class="marginCenter maxWidth letras">
-                    <h2 class="center bold">Historia de la Republica Dominicana</h2>
+                    <h2 class="center bold">Historia de la República Dominicana</h2>
                         <div class="magic"></div>
                     <div class="desarrolloArticulo" style="overflow: hidden !important">
                         <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos.
@@ -169,7 +172,7 @@ include_once("vendor/autoload.php");
         </div>
         <div class="letras">
             <article class="marginCenter maxWidth letras">
-                    <h2 class="center bold">Historia de la Republica Dominicana</h2>
+                    <h2 class="center bold">Historia de la República Dominicana</h2>
                         <div class="magic"></div>
                     <div class="desarrolloArticulo" style="overflow: hidden !important">
                         <p class="center letras">La República Dominicana se fundó en el año 1844 después de muchos años de opresión bajo los Haitianos.
@@ -200,7 +203,9 @@ include_once("vendor/autoload.php");
         <!--Todos los documentos JavaScript-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.0/TweenMax.min.js"></script>
         <script src="./js/Scrollmagic/ScrollMagic.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/jquery.ScrollMagic.js"></script>

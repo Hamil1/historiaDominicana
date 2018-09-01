@@ -230,3 +230,21 @@ span.agregarArticulo{
 div.botonesLogin{
     float: right;
 }
+
+div.magenta{
+    background-color: #2BBBAD !important;
+}
+
+button.botonMagenta{
+    background-color: #2BBBAD !important;
+    color: white;
+}
+
+div.magenta h4{
+    color: white;
+}
+
+button.botonRojo{
+    background-color: #e01818;
+    color: white;
+}
