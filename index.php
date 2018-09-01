@@ -25,6 +25,7 @@ include_once("vendor/autoload.php");
         <link rel="stylesheet" href="css/modalLogin/modalLogin.css">
         <link rel="stylesheet" href="css/alertify/alertify.css">
         <link rel="stylesheet" href="css/alertify/themes/default.css">
+        <link rel="stylesheet" href="terceros/MDB_Free/css/mdb.min.css">
     </head>
     <body>
             <div>
@@ -33,7 +34,7 @@ include_once("vendor/autoload.php");
                         
                         <?php 
                             if(isset($_SESSION['login'])){ //Aqui no se usa session_start() porque ya está activado en php.ini?>
-                                <span data-toggle="modal" class="agregarArticulo"><button id="agregarArticulo" data-toggle="modal" class="btn acceder cd-signin" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span><a id="cerrarSesion" class="cerrarSesion">Cerrar sesión</a>
+                                <span data-toggle="modal" class="agregarArticulo"><button id="agregarArticulo" data-targe="#fullHeightModalBottom" class="btn acceder cd-signin" data-toggle="tooltip" title="Agregar Articulo" data-placement="left"> <i class="fa fa-plus"></i></button></span><a id="cerrarSesion" class="cerrarSesion">Cerrar sesión</a>
                                 <?php
                             }else{ ?>
                                 <span data-toggle="modal"><button id="iniciarSesion" data-toggle="modal" class="accederLogin cd-signin" data-toggle="tooltip" title="Iniciar sesión" data-placement="left">Iniciar sesión</button></span>
@@ -55,6 +56,31 @@ include_once("vendor/autoload.php");
                     </ul>
                 </nav>
             </header>
+<!-- Full Height Modal Right -->
+<div class="modal fade bottom" id="fullHeightModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-full-height modal-bottom" role="document">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Full Height Modal Right -->
 
 <div class="cd-user-modal" id="modalLog"> <!-- this is the entire modal form, including the background -->
 
@@ -185,6 +211,7 @@ include_once("vendor/autoload.php");
         <script src="js/alertify/alertify.js"></script>
         <script  src="js/modalLogin/modalLogin.js"></script>
         <script src="terceros/ckeditor/ckeditor.js"></script>
+        <script src="terceros/MDB_Free/js/mdb.min.js"></script>
         <script src="js/Script.js" type="text/javascript"></script>
     </body>
 </html>
