@@ -232,16 +232,17 @@ div.botonesLogin{
 }
 
 div.magenta{
-    background-color: #2BBBAD !important;
+    background-color: #00695c !important;
 }
 
 button.botonMagenta{
-    background-color: #2BBBAD !important;
+    background-color: #00695c !important;
     color: white;
 }
 
 div.magenta h4{
     color: white;
+    font-weight: 800;
 }
 
 button.botonRojo{
