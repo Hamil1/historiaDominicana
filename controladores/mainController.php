@@ -17,6 +17,7 @@
 
         private function iniciarSesion(){
             $modelo = new mainModel();
+            session_start();
             $correo = (isset($_POST['correo']))?$_POST['correo']:false;
             $contrasena = (isset($_POST['contrasena']))?$_POST['contrasena']:false;
             
@@ -49,7 +50,7 @@
         }
 
         private function cerrarSesion(){
-            session_destroy();
+            session_unset();
             $mensaje = array("message"=>"La sesión ha sido cerrada.","option"=>"info","boton"=>'<span data-toggle="modal"><button id="iniciarSesion" data-toggle="modal" class="accederLogin cd-signin" data-toggle="tooltip" title="Iniciar sesión" data-placement="left">Iniciar sesión</button></span>');
             echo json_encode($mensaje);
         }

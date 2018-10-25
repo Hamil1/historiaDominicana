@@ -7,6 +7,7 @@ and open the template in the editor......
 <?php 
 
 include_once("vendor/autoload.php");
+session_start();
 
 ?>
 <html>
