@@ -74,7 +74,6 @@ if(!isset($_SESSION)){
           <!--Body-->
           <div class="modal-body">
             <textarea name="cuerpoArticulo" id="cuerpoArticulo" cols="30" rows="10"></textarea>
-
           </div>
           <!--Footer-->
           <div class="modal-footer">
