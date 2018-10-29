@@ -50,7 +50,9 @@
         }
 
         private function cerrarSesion(){
+            session_start();//Antes de dar session_unset hay que iniciar la session de nuevo (que disparate)
             session_unset();
+            session_destroy();
             $mensaje = array("message"=>"La sesión ha sido cerrada.","option"=>"info","boton"=>'<span data-toggle="modal"><button id="iniciarSesion" data-toggle="modal" class="accederLogin cd-signin" data-toggle="tooltip" title="Iniciar sesión" data-placement="left">Iniciar sesión</button></span>');
             echo json_encode($mensaje);
         }

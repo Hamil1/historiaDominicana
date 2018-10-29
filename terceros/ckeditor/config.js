@@ -7,5 +7,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
-	config.skin = 'moonocolor_v1.1';
+	config.skin = 'moonocolor_v1.1',
+	config.font_names = 'Arial;Times New Roman',
+	config.language = 'es';
 };
