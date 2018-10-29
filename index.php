@@ -7,8 +7,9 @@ and open the template in the editor......
 <?php 
 
 include_once("vendor/autoload.php");
-session_start();
-
+if(!isset($_SESSION)){
+    session_start();
+}
 ?>
 <html>
     <head>
